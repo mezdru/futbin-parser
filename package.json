@@ -1,0 +1,41 @@
+{
+  "name": "futbin-parser",
+  "version": "1.0.0",
+  "description": "Futbin parser",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mezdru/futbin-parser.git"
+  },
+  "keywords": ["Hello", "Greeter"],
+  "author": "Quentin Drumez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mezdru/futbin-parser/issues"
+  },
+  "homepage": "https://github.com/mezdru/futbin-parser#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^6.0.0-beta0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.2"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
