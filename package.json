@@ -1,6 +1,6 @@
 {
   "name": "futbin-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Futbin parser",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
